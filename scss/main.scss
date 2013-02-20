@@ -1,40 +1,25 @@
-/*!
- *	This project's description goes here
- *
- *	@author		Some author's name
- *	@version	v0.0.0
- *
- */
+// import configurations
+@import "base/settings";
+// import compass
+@import "compass";
+@import "compass/reset";
+// import compass-normalize
+// @import "normalize";
+// import susy
+@import "susy";
+
+// set box-layout
+@include border-box-sizing;
+
+// import custom styles
+@import "base/colors";
+@import "base/element_defaults";
+@import "base/typography";
+@import "layout/page";
+
+// debug vertical rhythm and grid usage
+@import "non-modular/debug";
 
 
-// Helpers
-@import "helpers/variables";
-@import "helpers/mixins";
-@import "helpers/normalize";
-@import "helpers/helpers";
 
-// Typography and Elements
-@import "elements/typography";
 
-// Layout
-@import "page/base";
-@import "page/header";
-@import "page/footer";
-
-// Modules
-@import "modules/box";
-
-// Print Stylesheets
-@media print {
-	@import "media/print";
-}
-
-// Media-Query for Tablets
-@media screen only and (max-width: 1024px) {
-	@import "media/tablets";
-}
-
-// Media-Query for Smartphones
-@media screen only and (max-width: 480px) {
-	@import "media/smartphones";
-}

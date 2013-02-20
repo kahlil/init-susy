@@ -1,0 +1,21 @@
+// **
+// Susy: Un-obtrusive grids for designers
+// By: Eric A. Meyer and OddBird
+// Site: susy.oddbird.net
+// **
+
+// Settings --------------------------------------------------------------
+// Susy & Compass use HTML hacks to support IE 6 and 7. You can turn that off:
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: true;
+
+// Font Sizes --------------------------------------------------------------
+$base-font-size:   18px;
+$base-line-height: 28px;
+
+// Grid --------------------------------------------------------------
+
+$total-columns: 12;            // a 12-column grid
+$column-width:  4em;           // each column is 4em wide
+$gutter-width:  1.7em;         // 1em gutters between columns
+$grid-padding:  $gutter-width; // grid-padding equal to gutters

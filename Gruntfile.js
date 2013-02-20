@@ -1,6 +1,6 @@
-module.exports = function (grunt) {
+'use strict';
 
-	'use strict';
+module.exports = function (grunt) {
 
 	// Project configuration.
 	grunt.initConfig({
@@ -37,24 +37,14 @@ module.exports = function (grunt) {
 			files: ['js/**/*.js', 'scss/**/*.scss']
 		},
 
-		sass: {
+		compass: {
 			dev: {
-				options: {
-					unixNewlines: true,
-					style: 'expanded'
-				},
-				files: {
-					'css/main.css': 'scss/main.scss'
-				}
+				sassDir: 'scss',
+				cssDir: 'css'
 			},
 			deploy: {
-				options: {
-					style: 'compressed'
-				},
-				files: {
-					'dist/css/main-<%= pkg.version %>.min.css': 'scss/main.scss'
-				}
-
+				sassDir: 'scss',
+				cssDir: 'css'
 			}
 		},
 
@@ -99,6 +89,16 @@ module.exports = function (grunt) {
 				],
 				tasks: 'jshint'
 			}
+		},
+
+		// Project configuration.
+		connect: {
+			server: {
+				options: {
+					port: 9001,
+					keepalive: true
+				}
+			}
 		}
 	});
 
@@ -106,20 +106,21 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-modernizr');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-clean');
-	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-connect');
 
 	grunt.loadTasks('grunt-tasks');
 
 	// A task for development
-	grunt.registerTask('dev', ['jshint', 'sass:dev']);
+	grunt.registerTask('dev', ['jshint', 'compass:dev']);
 
 	// A task for deployment
-	grunt.registerTask('deploy', ['jshint', 'clean', 'modernizr', 'sass:deploy', 'uglify', 'copy', 'fix-sourcemap']);
+	grunt.registerTask('deploy', ['jshint', 'clean', 'modernizr', 'compass:deploy', 'uglify', 'copy', 'fix-sourcemap']);
 
 	// Default task
-	grunt.registerTask('default', ['jshint', 'sass:dev', 'uglify', 'copy', 'fix-sourcemap']);
+	grunt.registerTask('default', ['jshint', 'compass:dev', 'uglify', 'copy', 'fix-sourcemap']);
 
 };

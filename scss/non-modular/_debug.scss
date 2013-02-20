@@ -1,0 +1,7 @@
+// debug
+body {
+	@include debug-vertical-alignment;
+}
+.l-page {
+	@include susy-grid-background;
+}

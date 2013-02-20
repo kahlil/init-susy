@@ -1,79 +1,15 @@
-# __init__, based on HTML5 Boilerplate
+# init-susy
 
-This project extends [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate) with some more structure for SCSS files and JavaScripts.
+This is a customized version of [@drublic](https://github.com/drublic)'s [init](https://github.com/drublic/init) containing grunt-contrib-compass instead of the Sass plugin, extended with Susy and the SMURF directory structure and a pre-configured vertical rhythm and it uses Node connect as a static server instead of Webrick.
 
+## Dependencies Besides Node and Grunt
 
-## TODO
-
-* Move all files currently not affected by Grunt into `dist`-dir (#11)
-* RequireJS (#12)
-* Tests (#7)
-
-
-## Dependencies
-
-You will need to install some stuff, if you haven't already:
-
-Mayors:
-
-* Node.js
 * Ruby
+* Sass
+* Compass
+* Susy
 
-Secondaries:
-
-* Node: npm
-* Ruby: SASS
-
-After you've set this stuff up please run
-
-	$ npm install -g grunt-cli
-
-This installs the Grunt command line tools.
-Afterwards please run
-
-	$ npm install
-
-in your project's directory.
-This will install all the things you need for running the grunt-tasks automatically.
-
-### Troubleshooting
-
-If running the install does not work, please try running it as with admin-rights:
-
-	$ sudo npm install -g grunt-cli
-
-
-## Contribute
-
-Please help making this project better and [contribute](CONTRIBUTING.md) with your knowledge.
-
-
-## CSS
-
-We are currently working with [SASS](http://sass-lang.com/) (in its dialect SCSS) and do not use CSS directly. Please do not edit the CSS-files in any case but search the correct `.scss` file and edit the according SCSS. If you are not familiar with SCSS you can write pure CSS which is actually valid SCSS.
-
-However all `.scss`-files are compiled into one file called `main.css` in the `css`-folder. There is a productive-version too.
-
-You can find more information about the installation process of SASS and the usage of SCSS in the [SASS Tutorial](http://sass-lang.com/tutorial.html).
-
-
-## JS
-
-We use jQuery and Modernizr (custom build via Grunt).
-
-Please use JSHint for your JavaScript before you commit. You can use the Grunt-task `jshint` for this. It is also integrated in `grunt watch`.
-
-
-## Deployment
-
-Please use [Grunt.js](https://github.com/cowboy/grunt) for building a production-state of a website. The `Gruntfile.js` has tasks for concatenating and minifing CSS and JavaScript.
-
-Additional information on this project is stored in `package.json`.
-
-
-## Development
-
-This package is developed and maintained by [Hans Christian Reinl](http://drublic.de/).
+----
 
 
 ## License
@@ -89,7 +25,7 @@ This package is developed and maintained by [Hans Christian Reinl](http://drubli
 ### Everything that has been developed by the contributors to this project:
 
 The MIT License (MIT)
-Copyright 2013 Hans Christian Reinl, http://drublic.de
+Copyright 2013 Kahlil Lechelt, http://kahlil.co
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

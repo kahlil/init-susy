@@ -1,0 +1,11 @@
+a {
+	color: $font-color;
+	&:hover {
+		color: $font-color;
+		text-decoration: none;
+	}
+}
+
+strong {
+	font-weight: 700;
+}

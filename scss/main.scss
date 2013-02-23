@@ -1,11 +1,13 @@
 // import configurations
 @import "base/settings";
+
 // import compass
 @import "compass";
+
+// Use the Compass reset
 @import "compass/reset";
-// import compass-normalize
-// @import "normalize";
-// import susy
+
+// import Susy
 @import "susy";
 
 // set box-layout

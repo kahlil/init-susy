@@ -39,12 +39,25 @@ module.exports = function (grunt) {
 
 		compass: {
 			dev: {
-				sassDir: 'scss',
-				cssDir: 'css'
+				options: {
+					require: ['susy', 'normalize'],
+					outputStyle: 'expanded',
+					debugInfo: true,
+					relativeAssets: true,
+					noLineComments: false,
+					sassDir: 'scss',
+					cssDir: 'css'
+				}
 			},
 			deploy: {
-				sassDir: 'scss',
-				cssDir: 'css'
+				options: {
+					require: ['susy', 'normalize'],
+					outputStyle: 'compressed',
+					relativeAssets: true,
+					noLineComments: true,
+					sassDir: 'scss',
+					cssDir: 'css'
+				}
 			}
 		},
 

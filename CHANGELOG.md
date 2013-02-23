@@ -2,6 +2,11 @@
 
 ### HEAD
 
+### Start new changelog history for init-susy
+
+* Imported Susy and preconfigured vertical rhythm with Compass mixins
+* Moved "use strict" to the top in Node files.
+
 ### 0.8.1 (05 February 2013)
 
 * Update jQuery to version 1.9.1 including source map

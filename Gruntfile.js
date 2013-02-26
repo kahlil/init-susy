@@ -92,7 +92,7 @@ module.exports = function (grunt) {
 		watch: {
 			scss: {
 				files: ['scss/**/*.scss'],
-				tasks: 'sass:dev'
+				tasks: 'compass:dev'
 			},
 
 			js: {
@@ -104,7 +104,7 @@ module.exports = function (grunt) {
 			}
 		},
 
-		// Project configuration.
+		// Server config
 		connect: {
 			server: {
 				options: {

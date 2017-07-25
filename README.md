@@ -1,5 +1,7 @@
 # init-susy
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kahlil/init-susy.svg)](https://greenkeeper.io/)
+
 This is a customized version of [@drublic](https://github.com/drublic)'s [init](https://github.com/drublic/init) containing grunt-contrib-compass instead of the Sass plugin, extended with Susy and the SMURF directory structure and a pre-configured vertical rhythm and it uses Node connect as a static server instead of Webrick.
 
 ## Dependencies Besides Node and Grunt
